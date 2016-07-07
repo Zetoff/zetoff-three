@@ -22,6 +22,9 @@
     "url": "https://github.com/zetoff/zetoff-three/issues"
   },
   "homepage": "https://github.com/zetoff/zetoff-three",
+  "dependencies":{
+    "three":"^0.78.0"
+  },
   "devDependencies": {
     "babel-core": "^6.3.26",
     "babel-loader": "^6.2.0",
