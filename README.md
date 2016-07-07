@@ -10,12 +10,13 @@ Wrapper of Three.js and other useful libraries
 
 ##Install
 
-npm install --save zetoff-three
+`npm install --save zetoff-three`
 
 ##How to use it?
-
+```
 import THREE from 'zetoff-three';
 import {ThreeBSP} from 'zetoff-three';
+```
 
 
 ##Includes:
