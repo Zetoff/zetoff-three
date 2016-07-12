@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/Zetoff/zetoff-three",
   "peerDependencies": {
-    "three": "^0.78.0"
+    "three": "^0.77.0"
   },
   "devDependencies": {
     "babel-core": "^6.3.26",
