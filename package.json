@@ -22,7 +22,7 @@
     "url": "https://github.com/Zetoff/zetoff-three/issues"
   },
   "homepage": "https://github.com/Zetoff/zetoff-three",
-  "dependencies":{
+  "peerDependencies":{
     "three":"^0.78.0"
   },
   "devDependencies": {
