@@ -1,3 +1,6 @@
+// Added in order to make it work with a modular approach
+import THREE from 'three';
+
 /**
  * @author dmarcos / http://github.com/dmarcos
  *
