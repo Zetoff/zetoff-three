@@ -1,6 +1,6 @@
 {
   "name": "zetoff-three",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Wrapper of Three.js and other useful libraries",
   "main": "dist/zetoff-three.js",
   "scripts": {
@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/Zetoff/zetoff-three",
   "peerDependencies": {
-    "three": "^0.77.0"
+    "three": ">=0.79.0"
   },
   "devDependencies": {
     "babel-core": "^6.3.26",
