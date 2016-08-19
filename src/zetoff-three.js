@@ -26,6 +26,8 @@ import './extras/geometry/curves/NURBSSurface';
 import './extras/geometry/curves/NURBSUtils';
 import ThreeBSP from './extras/geometry/modifiers/ThreeCSG';
 
+//math
+import './math';
 
 //TODO: Add PostProcessing
 
