@@ -1,3 +1,5 @@
+const { THREE } = global;
+
 /**
  * Represents an oriented plane. Adds both X and Y axis to the already existing
  * Z axis (plane's normal vector).
