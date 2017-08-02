@@ -9,8 +9,8 @@ const { THREE } = global;
  */
 THREE.OrientedPlane = class OrientedPlane extends THREE.Plane {
 
-  constructor(constant, normal, xAxis = undefined, yAxis = undefined) {
-    super(constant, normal);
+  constructor(normal, constant, xAxis = undefined, yAxis = undefined) {
+    super(normal, constant);
     this.initializeAxis(xAxis, yAxis);
   }
 
