@@ -45,3 +45,10 @@ import {ThreeBSP} from 'zetoff-three';
  - NURBSSurface
  - NURBSUtils
  - ThreeCSG
+
+
+
+ # Contributors
+You need to install three `npm install three` as a peer depency.
+I need to investigate how to better integrate with the three package in terms of
+dependencies
