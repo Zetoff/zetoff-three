@@ -8,18 +8,18 @@ Wrapper of Three.js and other useful libraries
 [![Dependency Status](https://david-dm.org/zetoff/zetoff-three.svg)](https://david-dm.org/zetoff/zetoff-three)
 [![devDependency Status](https://david-dm.org/zetoff/zetoff-three/dev-status.svg)](https://david-dm.org/zetoff/zetoff-three#info=devDependencies)
 
-##Install
+## Install
 
 `npm install --save zetoff-three`
 
-##How to use it?
+## How to use it?
 ```
 import THREE from 'zetoff-three';
 import {ThreeBSP} from 'zetoff-three';
 ```
 
 
-##Includes:
+## Includes:
 
 - Three.js
 
@@ -48,7 +48,9 @@ import {ThreeBSP} from 'zetoff-three';
 
 
 
- # Contributors
+## Contributors
+
 You need to install three `npm install three` as a peer depency.
 I need to investigate how to better integrate with the three package in terms of
-dependencies
+dependencies. See: https://github.com/Zetoff/zetoff-three/issues/12
+Another issue is that it only works when the THREE installed in the project is the same version as the one installed in this repo when the project is built. See: https://github.com/Zetoff/zetoff-three/issues/14
