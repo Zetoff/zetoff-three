@@ -1,6 +1,6 @@
 {
   "name": "zetoff-three",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "Wrapper of Three.js and other useful libraries",
   "main": "dist/zetoff-three.js",
   "scripts": {
