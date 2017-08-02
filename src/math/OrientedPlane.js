@@ -54,7 +54,7 @@ THREE.OrientedPlane = class OrientedPlane extends THREE.Plane {
    */
   containsVector(vector) {
     // plane contains vector if it is perpendicular to the normal
-    return vector.dot(this.normal) === 0;
+    return vector.dot(this.normal) === 1e-6;
   }
 
   /**
