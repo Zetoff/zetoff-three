@@ -66,7 +66,7 @@ THREE.OrientedPlane = class OrientedPlane extends THREE.Plane {
    */
   _calculateXAxis() {
     if (this._yAxis) {
-      return (new THREE.Vector3()).crossVectors(this._yAxis, this.normal);
+      return new THREE.Vector3().crossVectors(this._yAxis, this.normal);
     } else {
       return this.constructor.calculateXAxis(this.normal);
     }
@@ -81,7 +81,7 @@ THREE.OrientedPlane = class OrientedPlane extends THREE.Plane {
    */
   _calculateYAxis() {
     if (this._xAxis) {
-      return (new THREE.Vector3()).crossVectors(this.normal, this._xAxis);
+      return new THREE.Vector3().crossVectors(this.normal, this._xAxis);
     } else {
       return this.constructor.calculateYAxis(this.normal);
     }
@@ -105,8 +105,9 @@ THREE.OrientedPlane = class OrientedPlane extends THREE.Plane {
       delete this._yAxis;
       this._xAxis = value;
     } else {
-      throw new TypeError(`'xAxis' must be a THREE.Vector3 ` +
-        `perpendicular to the normal.`);
+      throw new TypeError(
+        `'xAxis' must be a THREE.Vector3 ` + `perpendicular to the normal.`
+      );
     }
   }
 
@@ -142,8 +143,9 @@ THREE.OrientedPlane = class OrientedPlane extends THREE.Plane {
       delete this._xAxis;
       this._yAxis = value;
     } else {
-      throw new TypeError(`'yAxis' must be a THREE.Vector3 ` +
-        `perpendicular to the normal.`);
+      throw new TypeError(
+        `'yAxis' must be a THREE.Vector3 ` + `perpendicular to the normal.`
+      );
     }
   }
 
@@ -171,7 +173,11 @@ THREE.OrientedPlane = class OrientedPlane extends THREE.Plane {
    */
   static calculateXAxis(normal) {
     const xAxis = new THREE.Vector3();
-    const direction = Math.max(Math.abs(normal.x), Math.abs(normal.y), Math.abs(normal.z));
+    const direction = Math.max(
+      Math.abs(normal.x),
+      Math.abs(normal.y),
+      Math.abs(normal.z)
+    );
     switch (direction) {
       case Math.abs(normal.x):
         xAxis.crossVectors(normal, new THREE.Vector3(0, 0, 1));
