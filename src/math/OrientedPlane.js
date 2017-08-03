@@ -202,4 +202,20 @@ THREE.OrientedPlane = class OrientedPlane extends THREE.Plane {
     const yAxis = new THREE.Vector3();
     return yAxis.crossVectors(normal, this.calculateXAxis(normal));
   }
+
+  /**
+ * Creates an OrientedPlane from a regular THREE.Plane.
+ *
+ * @param  THREE.Plane plane
+ * @return OrientedPlane
+ */
+  static createFromPlane(plane) {
+    const { constant, normal } = plane;
+    return new this(
+      constant,
+      normal,
+      this.calculateXAxis(normal),
+      this.calculateYAxis(normal)
+    );
+  }
 };
