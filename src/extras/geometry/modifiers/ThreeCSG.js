@@ -1,8 +1,11 @@
+import THREE from 'three';
+
 const EPSILON = 1e-5,
     COPLANAR = 0,
     FRONT = 1,
     BACK = 2,
     SPANNING = 3;
+
 export default class ThreeBSP {
     constructor(geometry) {
         // Convert THREE.Geometry to ThreeBSP
