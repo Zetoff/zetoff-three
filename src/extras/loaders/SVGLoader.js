@@ -1,3 +1,5 @@
+import THREE from 'three';
+
 /**
  * @author mrdoob / http://mrdoob.com/
  * @author zz85 / http://joshuakoo.com/
