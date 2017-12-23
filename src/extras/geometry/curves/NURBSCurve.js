@@ -1,3 +1,5 @@
+import THREE from 'three';
+
 /**
  * @author renej
  * NURBS curve object
@@ -62,4 +64,3 @@ THREE.NURBSCurve.prototype.getTangent = function ( t ) {
 	return tangent;
 
 };
-

@@ -1,3 +1,5 @@
+import THREE from 'three';
+
 /**
  * @author renej
  * NURBS surface object
@@ -51,5 +53,3 @@ THREE.NURBSSurface.prototype = {
 
 	}
 };
-
-
