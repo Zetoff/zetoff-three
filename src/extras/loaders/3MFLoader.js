@@ -1,11 +1,13 @@
-THREE.ThreeMFLoader = function ( manager ) {
+import THREE from 'three';
+
+const ThreeMFLoader = function ( manager ) {
 
 	this.manager = ( manager !== undefined ) ? manager : THREE.DefaultLoadingManager;
 	this.availableExtensions = [];
 
 };
 
-THREE.ThreeMFLoader.prototype = {
+ThreeMFLoader.prototype = {
 
 	constructor: THREE.ThreeMFLoader,
 
@@ -267,7 +269,7 @@ THREE.ThreeMFLoader.prototype = {
 				}
 
 				if ( pid ) {
-				  
+
 					triangleProperty[ 'pid' ] = pid;
 
 				}
@@ -540,7 +542,7 @@ THREE.ThreeMFLoader.prototype = {
 			var modelsKeys = Object.keys( modelsData );
 
 			for ( var i = 0; i < modelsKeys.length; i++ ) {
-			  
+
 				var modelsKey = modelsKeys[ i ];
 				var modelData = modelsData[ modelsKey ];
 				var modelXml = modelData[ 'xml' ];
@@ -602,3 +604,5 @@ THREE.ThreeMFLoader.prototype = {
     }
 
 };
+
+export default ThreeMFLoader;

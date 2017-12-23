@@ -1,12 +1,14 @@
+import THREE from 'three';
+
 /**
  * @author kovacsv / http://kovacsv.hu/
  * @author mrdoob / http://mrdoob.com/
  * @author mudcube / http://mudcu.be/
  */
 
-THREE.STLBinaryExporter = function () {};
+const STLBinaryExporter = function () {};
 
-THREE.STLBinaryExporter.prototype = {
+STLBinaryExporter.prototype = {
 
 	constructor: THREE.STLBinaryExporter,
 
@@ -92,3 +94,5 @@ THREE.STLBinaryExporter.prototype = {
 	}() )
 
 };
+
+export default STLBinaryExporter;

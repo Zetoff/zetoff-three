@@ -1,11 +1,13 @@
+import THREE from 'three';
+
 /**
  * @author kovacsv / http://kovacsv.hu/
  * @author mrdoob / http://mrdoob.com/
  */
 
-THREE.STLExporter = function () {};
+const STLExporter = function () {};
 
-THREE.STLExporter.prototype = {
+STLExporter.prototype = {
 
 	constructor: THREE.STLExporter,
 
@@ -73,3 +75,5 @@ THREE.STLExporter.prototype = {
 	}() )
 
 };
+
+export default STLExporter;

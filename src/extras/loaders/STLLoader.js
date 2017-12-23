@@ -1,3 +1,5 @@
+import THREE from 'Three';
+
 /**
  * @author aleeper / http://adamleeper.com/
  * @author mrdoob / http://mrdoob.com/
@@ -27,13 +29,13 @@
  */
 
 
-THREE.STLLoader = function ( manager ) {
+const STLLoader = function ( manager ) {
 
 	this.manager = ( manager !== undefined ) ? manager : THREE.DefaultLoadingManager;
 
 };
 
-THREE.STLLoader.prototype = {
+STLLoader.prototype = {
 
 	constructor: THREE.STLLoader,
 
@@ -489,3 +491,5 @@ if ( typeof DataView === 'undefined' ) {
 	 };
 
 }
+
+ export default STLLoader;
