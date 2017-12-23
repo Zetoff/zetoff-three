@@ -1,10 +1,12 @@
+import THREE from 'three';
+
 /**
  * @author mrdoob / http://mrdoob.com/
  */
 
-THREE.OBJExporter = function () {};
+const OBJExporter = function () {};
 
-THREE.OBJExporter.prototype = {
+OBJExporter.prototype = {
 
 	constructor: THREE.OBJExporter,
 
@@ -254,3 +256,5 @@ THREE.OBJExporter.prototype = {
 	}
 
 };
+
+export default OBJExporter;

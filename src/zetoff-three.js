@@ -1,29 +1,28 @@
-//Make THREE a global variable
-import './three-global';
+import THREE from 'three';
 
 //Loader Libraries
-import './extras/loaders/STLLoader';
-import './extras/loaders/OBJLoader';
-import './extras/loaders/BinaryLoader';
-import './extras/loaders/SVGLoader';
-import './extras/loaders/3MFLoader';
+import STLLoader from './extras/loaders/STLLoader';
+import OBJLoader from './extras/loaders/OBJLoader';
+import BinaryLoader from './extras/loaders/BinaryLoader';
+import SVGLoader from './extras/loaders/SVGLoader';
+import ThreeMFLoader from './extras/loaders/3MFLoader';
 
 //Export Libraries
 //TODO: test these Libraries
-import './extras/exporters/STLBinaryExporter';
-import './extras/exporters/STLExporter';
-import './extras/exporters/OBJExporter';
+import STLBinaryExporter from './extras/exporters/STLBinaryExporter';
+import STLExporter from './extras/exporters/STLExporter';
+import OBJExporter from './extras/exporters/OBJExporter';
 
 //Control Libraries
-import './extras/controls/OrbitControls';
-import './extras/controls/MouseControls';
-import './extras/controls/TrackballControls';
+import OrbitControls from './extras/controls/OrbitControls';
+import MouseControls from './extras/controls/MouseControls';
+import TrackballControls from './extras/controls/TrackballControls';
 
 
 //Geometry
-import './extras/geometry/curves/NURBSCurve';
-import './extras/geometry/curves/NURBSSurface';
-import './extras/geometry/curves/NURBSUtils';
+import NURBSCurve from './extras/geometry/curves/NURBSCurve';
+import NURBSSurface from './extras/geometry/curves/NURBSSurface';
+import NURBSUtils from './extras/geometry/curves/NURBSUtils';
 import ThreeBSP from './extras/geometry/modifiers/ThreeCSG';
 
 //math
@@ -33,13 +32,27 @@ import './math';
 
 //TODO: Add Shaders
 
-//Assign the global THREE to the local THREE
-const THREE = global.THREE;
-//Delete global THREE
-delete global.THREE;
+THREE.STLLoader = STLLoader;
+THREE.OBJLoader = OBJLoader;
+THREE.BinaryLoader = BinaryLoader;
+THREE.SVGLoader = SVGLoader;
+THREE.ThreeMFLoader = ThreeMFLoader;
+
+THREE.STLBinaryExporter = STLBinaryExporter;
+THREE.STLExporter = STLExporter;
+THREE.OBJExporter = OBJExporter;
+
+THREE.OrbitControls = OrbitControls;
+THREE.MouseControls = MouseControls;
+THREE.TrackballControls = TrackballControls;
+
+THREE.NURBSCurve = NURBSCurve;
+THREE.NURBSSurface = NURBSSurface;
+THREE.NURBSUtils = NURBSUtils;
+// FIXME ThreeBSP should be exported as THREE.BSP?
 
 //Export local THREE
 export default THREE;
 
 //Export others
-export {ThreeBSP};
+export { ThreeBSP };

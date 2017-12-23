@@ -7,7 +7,7 @@ import THREE from 'three';
  * This controls allow to change the orientation of the camera using the mouse
  */
 
-THREE.MouseControls = function ( object ) {
+const MouseControls = function ( object ) {
 
 	var scope = this;
 	var PI_2 = Math.PI / 2;
@@ -62,3 +62,5 @@ THREE.MouseControls = function ( object ) {
 	document.addEventListener( 'mousemove', onMouseMove, false );
 
 };
+
+export default MouseControls;

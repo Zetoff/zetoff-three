@@ -1,8 +1,10 @@
+import THREE from 'Three';
+
 /**
  * @author alteredq / http://alteredqualia.com/
  */
 
-THREE.BinaryLoader = function ( manager ) {
+const BinaryLoader = function ( manager ) {
 
 	if ( typeof manager === 'boolean' ) {
 
@@ -15,7 +17,7 @@ THREE.BinaryLoader = function ( manager ) {
 
 };
 
-THREE.BinaryLoader.prototype = {
+BinaryLoader.prototype = {
 
 	constructor: THREE.BinaryLoader,
 
@@ -696,3 +698,5 @@ THREE.BinaryLoader.prototype = {
 	}
 
 };
+
+export default BinaryLoader;

@@ -1,3 +1,5 @@
+import THREE from 'three';
+
 /**
  * @author renej
  * NURBS curve object
@@ -13,7 +15,7 @@
  *	NURBS curve
  **************************************************************/
 
-THREE.NURBSCurve = function ( degree, knots /* array of reals */, controlPoints /* array of Vector(2|3|4) */ ) {
+const NURBSCurve = function ( degree, knots /* array of reals */, controlPoints /* array of Vector(2|3|4) */ ) {
 
 	this.degree = degree;
 	this.knots = knots;
@@ -29,11 +31,11 @@ THREE.NURBSCurve = function ( degree, knots /* array of reals */, controlPoints 
 };
 
 
-THREE.NURBSCurve.prototype = Object.create( THREE.Curve.prototype );
-THREE.NURBSCurve.prototype.constructor = THREE.NURBSCurve;
+NURBSCurve.prototype = Object.create( THREE.Curve.prototype );
+NURBSCurve.prototype.constructor = NURBSCurve;
 
 
-THREE.NURBSCurve.prototype.getPoint = function ( t ) {
+NURBSCurve.prototype.getPoint = function ( t ) {
 
 	var u = this.knots[ 0 ] + t * ( this.knots[ this.knots.length - 1 ] - this.knots[ 0 ] ); // linear mapping t->u
 
@@ -52,7 +54,7 @@ THREE.NURBSCurve.prototype.getPoint = function ( t ) {
 };
 
 
-THREE.NURBSCurve.prototype.getTangent = function ( t ) {
+NURBSCurve.prototype.getTangent = function ( t ) {
 
 	var u = this.knots[ 0 ] + t * ( this.knots[ this.knots.length - 1 ] - this.knots[ 0 ] );
 	var ders = THREE.NURBSUtils.calcNURBSDerivatives( this.degree, this.knots, this.controlPoints, u, 1 );
@@ -63,3 +65,4 @@ THREE.NURBSCurve.prototype.getTangent = function ( t ) {
 
 };
 
+export default NURBSCurve;

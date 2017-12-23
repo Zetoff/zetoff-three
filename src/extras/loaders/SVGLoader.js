@@ -1,17 +1,19 @@
+import THREE from 'Three';
+
 /**
  * @author mrdoob / http://mrdoob.com/
  * @author zz85 / http://joshuakoo.com/
  */
 
-THREE.SVGLoader = function ( manager ) {
+const SVGLoader = function ( manager ) {
 
 	this.manager = ( manager !== undefined ) ? manager : THREE.DefaultLoadingManager;
 
 };
 
-THREE.SVGLoader.prototype = {
+SVGLoader.prototype = {
 
-	constructor: THREE.SVGLoader,
+	constructor: SVGLoader,
 
 	load: function ( url, onLoad, onProgress, onError ) {
 
@@ -31,3 +33,5 @@ THREE.SVGLoader.prototype = {
 	}
 
 };
+
+export default SVGLoader;
