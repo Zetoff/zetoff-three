@@ -1,3 +1,5 @@
+import THREE from 'three';
+
 /**
  * @author alteredq / http://alteredqualia.com/
  */
