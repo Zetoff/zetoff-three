@@ -104,7 +104,8 @@ THREE.OrientedPlane = class OrientedPlane extends THREE.Plane {
     } else if (this.containsVector(value)) {
       delete this._yAxis;
       this._xAxis = value;
-      this._yAxis = crossVectors(this.normal, value);
+      this._yAxis = new THREE.Vector3();
+      this._yAxis.crossVectors(this.normal, value);
     } else {
       throw new TypeError(
         `'xAxis' must be a THREE.Vector3 ` + `perpendicular to the normal.`
@@ -143,7 +144,8 @@ THREE.OrientedPlane = class OrientedPlane extends THREE.Plane {
     } else if (this.containsVector(value)) {
       delete this._xAxis;
       this._yAxis = value;
-      this._xAxis = crossVectors(value, this.normal);
+      this._xAxis = new THREE.Vector3();
+      this._xAxis.crossVectors(value, this.normal);
     } else {
       throw new TypeError(
         `'yAxis' must be a THREE.Vector3 ` + `perpendicular to the normal.`
