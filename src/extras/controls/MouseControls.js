@@ -1,5 +1,5 @@
 // Added in order to make it work with a modular approach
-import THREE from 'three';
+const { THREE } = global;
 
 /**
  * @author dmarcos / http://github.com/dmarcos

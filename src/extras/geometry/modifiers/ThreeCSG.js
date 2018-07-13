@@ -1,4 +1,4 @@
-import THREE from 'three';
+const { THREE } = global;
 
 const EPSILON = 1e-5,
     COPLANAR = 0,
