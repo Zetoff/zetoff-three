@@ -1,4 +1,4 @@
-import THREE from 'three';
+const { THREE } = global;
 
 /**
  * @author kovacsv / http://kovacsv.hu/
