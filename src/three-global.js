@@ -1,3 +1,1 @@
-//Set THREE as global
-import THREE from 'three';
-global.THREE = THREE;
+global.THREE = global.THREE || require('three');
