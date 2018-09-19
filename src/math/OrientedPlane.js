@@ -190,7 +190,8 @@ THREE.OrientedPlane = class OrientedPlane extends THREE.Plane {
         xAxis.crossVectors(normal, new THREE.Vector3(1, 0, 0));
         break;
       case Math.abs(normal.z):
-        xAxis.crossVectors(normal, new THREE.Vector3(0, 1, 0));
+        // Changed from (0,1,0) because the Circle block wasn't generating the right output.
+        xAxis.crossVectors(normal, new THREE.Vector3(0, -1, 0)); 
         break;
       default:
         xAxis.crossVectors(normal, new THREE.Vector3(0, 0, 1));
