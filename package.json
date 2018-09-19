@@ -1,6 +1,6 @@
 {
   "name": "zetoff-three",
-  "version": "0.0.19",
+  "version": "0.0.21",
   "description": "Wrapper of Three.js and other useful libraries",
   "main": "dist/zetoff-three.js",
   "scripts": {
@@ -34,7 +34,7 @@
     "chai": "^3.4.1",
     "del": "^2.2.0",
     "glob": "^7.0.3",
-    "gulp": "^3.9.0",
+    "gulp": "^3.9.1",
     "gulp-eslint": "^2.0.0",
     "gulp-filter": "^4.0.0",
     "gulp-istanbul": "^0.10.3",
